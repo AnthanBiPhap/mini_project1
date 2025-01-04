@@ -1,5 +1,4 @@
-// App.tsx
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -49,64 +48,69 @@ function App() {
       <div className="min-h-screen bg-background text-foreground">
         <Navbar />
         <Sidebar />
-        
         <main className="pl-16">
           <Routes>
-            <Route path="/" element={
-              <>
-                <HeroSection title="The Wild Robot" releaseDate="23 July" />
-                <section className="container py-8">
-                  <h2 className="text-2xl font-bold mb-6">Popular Movies</h2>
-                  {isLoading ? (
-                    <div className="text-center">Loading...</div>
-                  ) : error ? (
-                    <div className="text-center text-red-500">{error}</div>
-                  ) : (
-                    <Swiper
-                      modules={[Navigation]}
-                      spaceBetween={30}
-                      slidesPerView={3}
-                      navigation
-                      pagination={{ clickable: true }}
-                      breakpoints={{
-                        640: { slidesPerView: 1 },
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 },
-                        1280: { slidesPerView: 4 },
-                      }}
-                    >
-                      {movies.map((movie) => (
-                        <SwiperSlide key={movie.id}>
-                          <Link to={`/movie/${movie.id}`}>
-                            <MovieCard
-                              id={movie.id}
-                              title={movie.title}
-                              posterPath={movie.poster_path}
-                            />
-                          </Link>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
-                  )}
+            <Route
+              path="/"
+              element={
+                <>
+                  <HeroSection title="The Wild Robot" releaseDate="23 July" />
+                  <section className="container py-8">
+                    <h2 className="text-2xl font-bold mb-6">Popular Movies</h2>
+                    {isLoading ? (
+                      <div className="text-center">Loading...</div>
+                    ) : error ? (
+                      <div className="text-center text-red-500">{error}</div>
+                    ) : (
+                      <Swiper
+                        modules={[Navigation]}
+                        spaceBetween={30}
+                        slidesPerView={3}
+                        navigation
+                        pagination={{ clickable: true }}
+                        breakpoints={{
+                          640: { slidesPerView: 1 },
+                          768: { slidesPerView: 2 },
+                          1024: { slidesPerView: 3 },
+                          1280: { slidesPerView: 4 },
+                        }}
+                      >
+                        {movies.map((movie) => (
+                          <SwiperSlide key={movie.id}>
+                            <Link to={`/movie/${movie.id}`}>
+                              <MovieCard
+                                id={movie.id}
+                                title={movie.title}
+                                posterPath={movie.poster_path}
+                              />
+                            </Link>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
+                    )}
+                  </section>
+                </>
+              }
+            />
+            <Route
+              path="/popular"
+              element={
+                <section className="container mt-6 py-8">
+                  <h2 className="text-2xl font-bold mb-6">All Movies</h2>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                    {movies.map((movie) => (
+                      <Link key={movie.id} to={`/movie/${movie.id}`}>
+                        <MovieCard
+                          id={movie.id}
+                          title={movie.title}
+                          posterPath={movie.poster_path}
+                        />
+                      </Link>
+                    ))}
+                  </div>
                 </section>
-              </>
-            } />
-            <Route path="/popular" element={
-              <section className="container mt-6 py-8">
-                <h2 className="text-2xl font-bold mb-6">All Movies</h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                  {movies.map((movie) => (
-                    <Link key={movie.id} to={`/movie/${movie.id}`}>
-                      <MovieCard
-                        id={movie.id}
-                        title={movie.title}
-                        posterPath={movie.poster_path}
-                      />
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            } />
+              }
+            />
             <Route path="/movie/:id" element={<MovieDetails />} />
           </Routes>
         </main>

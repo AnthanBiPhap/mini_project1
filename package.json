@@ -1,5 +1,5 @@
 {
-  "homepage": "https://AnthanBiPhap.github.io/mini_project",
+  "homepage": "https://AnthanBiPhap.github.io/mini_project1",
 
   "name": "react-v19-vite",
   "private": true,
@@ -9,7 +9,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "pnpm run build",
+  "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",

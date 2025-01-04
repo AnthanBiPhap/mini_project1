@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/95 top-5 -left-2">
+    <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-blue-300 via-indigo-300 to-pink-300 bg-opacity-80 p-2">
+
       <div className="container mx-auto flex h-16 items-center justify-between">
         <a href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold">MOVIE<span className="text-yellow-500">VENNIE</span></span>
+          <span className="text-xl font-bold text-white">MOVIE<span className="text-yellow-500">VENNIE</span></span>
         </a>
         
         <div className="flex items-center space-x-4 flex-1 justify-end">
@@ -16,13 +17,13 @@ const Navbar: React.FC = () => {
             <input
               type="text"
               placeholder="Search movie..."
-              className="w-full pl-8 pr-4 py-2 rounded-md bg-background border border-input"
+              className="w-full pl-8 pr-4 py-2 rounded-md bg-white bg-opacity-80 border border-input text-gray-900"
             />
           </div>
-          <Link to="/" className="px-4 py-2 rounded-md bg-blue-300 hover:bg-gray-400 transition">
+          <Link to="/" className="px-4 py-2 rounded-md bg-blue-300 hover:bg-green-400 transition text-white">
             Home
           </Link>
-          <Link to="/popular" className="px-4 py-2 rounded-md bg-blue-300 hover:bg-gray-400 transition">
+          <Link to="/popular" className="px-4 py-2 rounded-md bg-blue-300 hover:bg-green-400 transition text-white">
             Popular
           </Link>
           <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">

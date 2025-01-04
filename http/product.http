@@ -1,0 +1,3 @@
+# Cách gọi API với REST Client
+GET https://api.escuelajs.co/api/v1/products
+Get https://api.themoviedb.org/3/movie/popular

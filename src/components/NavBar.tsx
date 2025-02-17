@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
           </Link>
           <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
             <img 
-              src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/277584332_501675071568732_8234032733292798986_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=4GhGTtjMB2YQ7kNvgFBPBke&_nc_oc=Adg9IN-7b4WuTZ8A7Ew4V2WLHK7R57Mryx5Pe5QalDJSq5cMIBEEG_EowtoEEOxKTZuC4dvwTy0G4WGkohlS87Iq&_nc_zt=23&_nc_ht=scontent.fhan14-5.fna&_nc_gid=AiDdyLnExXKjzruvgnB4ObZ&oh=00_AYDgfWjJH4nZyL-cRnJ_PuxOtED9Gdvm0ed86RIBAVPS6Q&oe=677EC981" 
+              src="https://scontent.fsgn2-10.fna.fbcdn.net/v/t39.30808-1/277584332_501675071568732_8234032733292798986_n.jpg?stp=dst-jpg_p160x160_tt6&_nc_cat=109&ccb=1-7&_nc_sid=e99d92&_nc_ohc=0U5an1Ty_t8Q7kNvgEcqGn4&_nc_oc=Adjc_cyXbkbOwxVSiWzqvb30Bpx-KkUhicj2Rj8sRBnOxfNqBXt_zs9DLdV1wdwU27l_EUqI9wkhfZQsuu8bXxqH&_nc_zt=24&_nc_ht=scontent.fsgn2-10.fna&_nc_gid=AC4_vzRAwB7A1Bn0K2HxVgQ&oh=00_AYAhVD42SfGfbJ4TOm-d6fbHn7pwZ_qrLccD0HNkHV0xkA&oe=67B8F707" 
               alt="Miko" 
               className="w-10 h-10 rounded-full" 
             />
